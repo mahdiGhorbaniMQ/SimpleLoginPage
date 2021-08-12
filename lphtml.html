@@ -6,12 +6,42 @@
     <link rel="stylesheet" href="lpstyle.css">
     <script src="lpscript.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
-    <script src="jquery-3.6.0.min.js"></script>
 </head>
 <body>
+<div class="container" id="container">
+    <div class="form-container sing-up-container">
+        <form action="#">
+            <h1>Create Account</h1>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sing Up</button>
+        </form>
+    </div>
+    <div class="form-container sing-in-container">
+        <form action="#">
+            <h1>Sing in</h1>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <a href="#">Forget your password</a>
+            <button>Sing In</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>Please login to your <strong>BOTSTART</strong> account with your personal info</p>
+                <button class="ghost" id="singIn" onclick="container.classList.remove('right-panel-active');">Sing In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details to create a <strong>BOTSTART</strong> account</p>
+                <button class="ghost" id="singUp" onclick="container.classList.add('right-panel-active');">Sing Up</button>
+            </div>
+        </div>
 
+    </div>
+</div>
 </body>
 </html>
